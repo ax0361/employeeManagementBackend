@@ -1,6 +1,7 @@
 package com.crud.employee.Controller;
 
 import com.crud.employee.Entity.Employee;
+import com.crud.employee.Interface.EmployeeServiceInterface;
 import com.crud.employee.Service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -13,7 +14,7 @@ import java.util.List;
 @RequestMapping("employee")
 public class EmployeeController {
     @Autowired
-    private EmployeeService employeeService;
+    private EmployeeServiceInterface employeeService;
 
     @PostMapping("")
     public Employee addNewEmployee(@RequestBody Employee employee){

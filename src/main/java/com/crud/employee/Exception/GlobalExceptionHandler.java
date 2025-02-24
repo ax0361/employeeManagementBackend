@@ -34,7 +34,7 @@ public class GlobalExceptionHandler {
         Map<String, Object> error = new HashMap<>();
         error.put("status", status.value());
         error.put("message", message);
-        error.put("success", true);
+        error.put("success", false);
 
         return new ResponseEntity<>(error, status);
     }
